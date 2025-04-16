@@ -7,16 +7,21 @@
   "main": "index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "mocha ./test/index.js"
+    "test": "mocha ./test/index.js",
+    "build:umd": "rollup --config rollup.config.js"
   },
   "author": "Keith Horwood <khorwood@openai.com>",
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "audio-decode": "^2.2.2",
     "chai": "^5.1.1",
     "dotenv": "^16.4.5",
     "mocha": "^10.7.3",
     "prettier": "^3.3.3",
+    "rollup": "^2.79.2",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^5.6.2",
     "websocket": "^1.0.35"
   },
